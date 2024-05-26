@@ -1,0 +1,83 @@
+:root {
+  --secondary: rgba(255, 255, 255, 0.78);
+  --black: #2e302f;
+  --yellow-gradient: linear-gradient(to top right, #F9B209 0%, #F6C500 100%);
+  --orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+  --yellow: #f9b209;
+  --shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
+  --light-yellow:#F4EAD2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.paddings {
+  padding: 1.5rem;
+}
+
+.innerWidth {
+  width: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flexColCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.button
+{
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  color: white;
+  background: var(--yellow-gradient);
+  border: none;
+  border-radius: 4px;
+  transition: all 300ms ease-in;
+}
+.button:hover
+{
+  cursor: pointer;
+  transform: scale(1.1);
+}

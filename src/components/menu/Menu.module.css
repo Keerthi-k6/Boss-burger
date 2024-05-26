@@ -1,0 +1,38 @@
+.menu-wrapper
+{
+    padding-bottom: 2rem;
+}
+.menu-wrapper>p
+{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.menu-title>h1{
+    font-size: 3rem;
+    color: var(--black);
+}
+.menu-container
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.menu-item
+{
+    background-color:#f6f4f1;
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+.menu-item:hover{
+    -webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+    box-shadow: var(--shadow);
+}

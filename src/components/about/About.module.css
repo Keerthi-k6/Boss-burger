@@ -1,0 +1,23 @@
+.about-wrapper
+{
+    background-color: #F4EAD2;
+}
+.about-container
+{
+    display: flex;
+    margin: 0 4rem;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    color: #f9b209;
+}
+.about-title>h1{
+    font-size: 3rem;
+    color: var(--black);
+}
+.about-p
+{
+    color:var(--black);
+    padding-top: 1rem;
+    font-size: 1rem;
+}

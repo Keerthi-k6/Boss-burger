@@ -1,0 +1,76 @@
+.nav-wrapper {
+    background: var(--black);
+    color: white;
+    z-index: 2;
+  }
+  
+  .nav-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .nav-links {
+    gap: 2rem;
+  }
+  
+  .nav-links > *:hover {
+    cursor: pointer;
+    color: var(--yellow);
+  }
+  
+  .nav-links > button:hover {
+    color: white;
+  }
+  
+  .cart {
+    font-weight: 500;
+    padding: 9px;
+    color: white;
+   
+    border-radius: 50%;
+    transition: all 300ms ease-in;
+    position: relative; /* Added to position the count badge */
+  }
+  
+  .cart span {
+    position: absolute;
+    top: -3px; /* Adjust as needed */
+    right: -5px; /* Adjust as needed */
+    background-color: var(--light-yellow);
+    color: var(--yellow);
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 0.7rem;
+  }
+  
+  .user_container {
+    position: relative;
+  }
+  
+  .usermenu {
+    position: absolute;
+    z-index: 1;
+    background: var(--yellow-gradient);
+    display: none;
+    /* Added styles for dropdown */
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .usermenu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .usermenu a:hover {
+    color: var(--black);
+  }
+  
+  .usermenu.open {
+    display: block;
+  }
+  
