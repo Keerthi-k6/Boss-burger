@@ -1,0 +1,10 @@
+/* StarRating.module.css */
+.starRating {
+    display: flex;
+  }
+  
+  .starRating svg {
+    color: var(--yellow);
+    font-size: 1.2rem;
+  }
+  

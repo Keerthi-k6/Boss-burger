@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import Banner from '../../components/banner/Banner'
 import Menu from '../../components/menu/Menu'
 import Contact from '../../components/contact/Contact'

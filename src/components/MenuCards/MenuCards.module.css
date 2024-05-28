@@ -1,0 +1,20 @@
+.fav {
+    position: relative;
+    color: red;
+    top:2px;
+    font-size: 1.4rem;
+}
+
+.fav.not {
+    color: grey;
+}
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    background: var(--yellow-gradient);
+    padding: 0.5rem ;
+    border-radius: 0.5rem;
+}

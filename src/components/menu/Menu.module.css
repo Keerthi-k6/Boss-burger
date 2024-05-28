@@ -21,12 +21,13 @@
 }
 .menu-item
 {
-    background-color:#f6f4f1;
+    background-color:var(--card-color);
     color: var(--black);
     padding: 2rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: all 400ms ease;
+    position: relative;
 }
 .menu-item:hover{
     -webkit-transform: translate(0, -8px);
