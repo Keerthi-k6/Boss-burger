@@ -16,6 +16,7 @@
   .nav-links > *:hover {
     cursor: pointer;
     color: var(--yellow);
+    
   }
   
   .nav-links > button:hover {
@@ -26,7 +27,6 @@
     font-weight: 500;
     padding: 9px;
     color: white;
-   
     border-radius: 50%;
     transition: all 300ms ease-in;
     position: relative; /* Added to position the count badge */
@@ -39,8 +39,9 @@
     background-color: var(--light-yellow);
     color: var(--yellow);
     border-radius: 50%;
-    padding: 4px;
-    font-size: 0.7rem;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    font-weight: 600;
   }
   
   .user_container {

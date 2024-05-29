@@ -3,13 +3,12 @@ import style from './MenuCards.module.css'
 import styles from '../Menu/Menu.module.css'
 import { Link } from 'react-router-dom'
 import StarRating from '../starRating/StarRating';
+import Title from '../Title/Title';
 const MenuCards = ({foods}) => {
   return (
     <ul>
        <section className={styles['menu-wrapper']}>
-        <div className={`${styles['menu-title']} innerwidth paddings flexCenter`}>
-          <h1>Our Menu </h1>
-        </div>
+        <Title Title='Our Menu' color='var(--black)' fontSize='3rem' />
         <div className={`${styles['menu-container']} innerwidth paddings flexCenter`}>
           {foods.map(food => {
             return (

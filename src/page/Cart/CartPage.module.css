@@ -1,0 +1,93 @@
+.menu-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.menu-container
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-radius: 2rem;
+}
+.menu-item
+{
+    width:100%;
+    background-color:var(--card-color);
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    gap: 3rem;
+    position: relative;
+}
+.menu-image img
+{
+   border-radius: 1rem;
+}
+.btn{
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    color: white;
+    background: var(--yellow-gradient);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover
+{
+    color:var(--black);
+}
+.checkout-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.checkout
+{
+    background-color: var(--secondary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    border: var(--yellow) 1px solid;
+    padding: 4rem;
+    gap: 2rem;
+}
+.checkout .food-cnt::before
+{
+    content: "Count : ";
+    color: var(--yellow);
+    font-size: 1.2rem;
+}
+.checkout  .total::before
+{
+    content: "Total : ";
+    color: var(--yellow);
+    font-size: 1.2rem;
+}
+.checkout .food-cnt 
+{
+    font-size: 1.2rem;
+  
+}
+.checkout .total{
+    font-size: 1.2rem; 
+}
+select
+{
+    outline: none;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--black);
+    border-bottom: 1px solid var(--yellow);
+}

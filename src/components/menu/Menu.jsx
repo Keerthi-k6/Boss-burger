@@ -12,6 +12,7 @@ import combo1 from '../../assets/combo1.jpg'
 import combo2 from '../../assets/combo2.jpg'
 import combo3 from '../../assets/combo3.jpg'
 import { Link } from 'react-router-dom'
+import Title from '../Title/Title'
 const data = [
   {
         id: 1,
@@ -32,11 +33,9 @@ const data = [
 const Menu = () => {
     return (
       <section className={styles['menu-wrapper']} id='menu'>
-        <div className={`${styles['menu-title']} innerwidth paddings flexCenter`}>
-          <h1>Our Popular Combos </h1>
-        </div>
+       <Title Title='Our Popular Combos' color='var(--black)' fontSize='3rem' />
         <div className={`${styles['menu-container']} innerwidth paddings flexCenter`}>
-          {data.map(({ id, image, title, price }) => {
+          {data.map(({ id, image, title }) => {
             return (
               <article className={styles['menu-item']} key={id}>
                 <div className={styles['menu-image']}>

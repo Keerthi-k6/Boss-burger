@@ -4,6 +4,7 @@ import Search from '../../components/Search/Search';
 import { getAll, getAllByTag, getAllTags, search } from '../../services/foodService';
 import { useParams } from 'react-router-dom';
 import Tags from '../../components/Tags/Tags';
+import NotFound from '../../components/NotFound/NotFound';
 const initialState = {foods:[],tags:[]};
 const reducer = (state, action) => {
   switch (action.type) {
@@ -31,7 +32,7 @@ const MenuSearch = () => {
       <Search/>
       <Tags tags={tags}/>
       {
-        foods.length === 0 ? <h2 style={{textAlign: 'center'} }>Nothing found. Please try again!</h2> : <MenuCards foods={foods}/>
+        foods.length === 0 ? <NotFound linkText={'Reset Search'} linkRoute={'/menu'}/> : <MenuCards foods={foods}/>
       }
       
     </div>

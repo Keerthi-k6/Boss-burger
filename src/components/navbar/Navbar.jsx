@@ -3,16 +3,14 @@ import styles from './Navbar.module.css';
 import logo from '../../assets/nav-logo.png';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from '../../hooks/useCart';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
   const user = {
     name: 'John',
   };
-  const cart = {
-    totalCount: 10,
-  };
-
+  const {cart} = useCart()
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

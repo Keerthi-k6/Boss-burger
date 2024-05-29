@@ -11,10 +11,6 @@
     align-items: flex-start;
     color: #f9b209;
 }
-.about-title>h1{
-    font-size: 3rem;
-    color: var(--black);
-}
 .about-p
 {
     color:var(--black);

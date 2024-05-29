@@ -1,12 +1,11 @@
 import React from 'react'
 import styles from'./About.module.css'
 import about from '../../assets/about.png'
+import Title from '../Title/title';
 const About = () => {
   return (
     <section className={styles['about-wrapper']} id='about'>
-      <div className={`${styles['about-title']} innerwidth paddings flexCenter `}>
-        <h1>About Us</h1>
-      </div>
+     <Title fontSize={'3rem'} color={'var(--black)'} Title={'About Us'}/>
       <div className={`${styles['about-container']} innerwidth paddings `}>
         {/* leftside */}
         <div className={styles['about-image']}>

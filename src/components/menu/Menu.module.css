@@ -7,11 +7,6 @@
   text-align: center;
   font-size: 1.2rem;
 }
-
-.menu-title>h1{
-    font-size: 3rem;
-    color: var(--black);
-}
 .menu-container
 {
     position: relative;

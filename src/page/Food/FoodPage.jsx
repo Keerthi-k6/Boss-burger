@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import styles from './FoodPage.module.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getById } from '../../services/foodService'
 import StarRating from '../../components/starRating/StarRating'
 import Tags from '../../components/Tags/Tags'
+import Title from '../../components/Title/Title'
+import { useCart } from '../../hooks/useCart'
+import NotFound from '../../components/NotFound/NotFound'
 const FoodPage = () => {
     const [food,setfood] = useState({})
     const {id} = useParams()
+    const {addToCart} = useCart()
+    const navigate = useNavigate()
+    const handleAddToCart = ()=>{
+        addToCart(food)
+        navigate('/cart')
+    }
     useEffect(()=>
     {
         getById(id).then(food=> setfood(food))
@@ -14,7 +23,7 @@ const FoodPage = () => {
   return (
     <>
       {
-        food && (
+        !food ? (<NotFound message={'Food not found !'} linkRoute={'/'} linkText={'Back to HomePage'}/>) : (
             <section className={styles['food-wrapper']} >
             <div className={`${styles['food-container']} innerwidth paddings flexStart`} >
               {/* leftside */}
@@ -24,7 +33,7 @@ const FoodPage = () => {
               {/* rightside */}
               <div className={styles['food-desc']}>
                 <div className={styles['food-title']+' flexStart' } style={{justifyContent: 'space-between'}}>
-                <h2>{food.name}</h2>
+                <Title Title={food.name} color={'var(--black)'} fontSize={'2rem'}/>
                 <span className= {`${styles['fav']} ${food.favorite? '':styles['not']}`}>
                 ❤
                 </span>
@@ -44,7 +53,7 @@ const FoodPage = () => {
                   </div>
                   <p>{food.des}</p>
                 </div>
-                <button className={styles['food-btn']+ ' button'}>Add to Cart</button>
+                <button className={styles['food-btn']+ ' button'} onClick={handleAddToCart}>Add to Cart</button>
               </div>
             </div>
           </section>

@@ -12,11 +12,6 @@
     justify-content: flex-start;
     color: #f9b209;
 }
-.food-title>h2{
-    font-size: 2rem;
-    color: var(--black);
-   
-}
 .food-title
 {
     gap: 2rem;
