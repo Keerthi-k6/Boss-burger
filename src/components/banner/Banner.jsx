@@ -2,8 +2,7 @@ import React from 'react'
 import styles from'./Banner.module.css'
 import { motion } from 'framer-motion';
 import banner from '../../assets/banner.png'
-import {FaWhatsapp} from 'react-icons/fa'
-
+import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
       <section className={styles['banner-wrapper']} id='banner'> 
@@ -31,13 +30,7 @@ const Banner = () => {
                 style={{marginTop: '2rem'}}
               >
                 <button className={'button'} style={{marginRight: '1rem'}}>
-                  <a href='https://wa.me/+14155238886' target='_blank'><div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>Order Online </div></a>
-                </button>
-                <button className={'button'}>
-                  <a href='https://wa.me/+14155238886' target='_blank'>
-                    <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>Customize!<FaWhatsapp style={{fontSize: '1rem'}}/>
-                    </div>
-                    </a>
+                  <Link to='/menu'><div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>Order Online </div></Link>
                 </button>
               </motion.div>
             </div>

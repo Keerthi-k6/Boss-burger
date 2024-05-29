@@ -1,0 +1,68 @@
+.food-wrapper
+{
+    background-color: var(--light-yellow);
+}
+.food-container
+{
+    display: flex;
+    margin: 0 4rem;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #f9b209;
+}
+.food-title>h2{
+    font-size: 2rem;
+    color: var(--black);
+   
+}
+.food-title
+{
+    gap: 2rem;
+}
+.food-p
+{
+    color:var(--black);
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+.food-image>img{
+    border-radius: 1rem;
+}
+.food-desc
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
+}
+.food-desc>h1{
+    color: var(--black);
+}
+.fav {
+    position: relative;
+    color: red;
+    top:2px;
+    font-size: 2rem;
+}
+
+.fav.not {
+    color: grey;
+}
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    background: var(--yellow-gradient);
+    padding: 0.5rem ;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: max-content;
+    
+}
+.food-btn
+{
+    margin-top: 2rem;
+}

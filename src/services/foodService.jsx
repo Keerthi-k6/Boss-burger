@@ -12,3 +12,5 @@ export const getAllByTag = async tag =>
         if(tag === 'All') return await getAll()
         return sample_foods.filter(food => food.tags.includes(tag))
     }
+export const getById = async foodId =>
+    sample_foods.find(item=> item.id === parseInt(foodId))

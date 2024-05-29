@@ -1,6 +1,6 @@
 .about-wrapper
 {
-    background-color: #F4EAD2;
+    background-color: var(--light-yellow);
 }
 .about-container
 {
