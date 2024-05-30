@@ -1,16 +1,19 @@
 import AppRoutes from './AppRoutes'
 import './App.css'
-import About from './components/about/About'
-import Banner from './components/banner/Banner'
-import Contact from './components/contact/Contact'
-import Menu from './components/menu/Menu'
 import Navbar from './components/navbar/Navbar'
-import Homepage from './page/Homepage/Homepage'
+import Loading from './components/Loading/Loading'
+import { useLoading } from './hooks/useLoading'
+import {setLoadingInterceptor} from './interceptors/loadingInterceptor'
+import { useEffect } from 'react'
 function App() {
-
+  const {showLoading, hideLoading} = useLoading();
+  useEffect(() => {
+    setLoadingInterceptor({showLoading, hideLoading})
+  },[])
   return (
     <>   
     <div className="App">
+      <Loading/>
       <Navbar/>
       <AppRoutes/>
     </div>
