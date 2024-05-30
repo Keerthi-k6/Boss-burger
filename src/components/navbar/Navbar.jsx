@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
 import logo from '../../assets/nav-logo.png';
 import { Link } from 'react-router-dom';
@@ -7,12 +7,18 @@ import { useCart } from '../../hooks/useCart';
 import { useAuth } from '../../hooks/useAuth';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
-  const {user,logout} = useAuth()
-  const {cart} = useCart()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
+  const { cart } = useCart();
+
+  useEffect(() => {
+    console.log('Navbar re-render, user:', user);
+  }, [user]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <section className={styles['nav-wrapper']} id='navbar'>
       <div className={`${styles['nav-container']} flexCenter innerWidth}`} style={{ justifyContent: 'space-between', padding: '1.5rem' }}>
@@ -30,7 +36,7 @@ const Navbar = () => {
             {user ? (
               <div className='user_container'>
                 <Link to='/profile'>{user.name}</Link>
-                <div className={`${styles.usermenu} ${isMenuOpen && styles.open}`}> 
+                <div className={`${styles.usermenu} ${isMenuOpen && styles.open}`}>
                   <Link to='/profile'>Profile</Link>
                   <Link onClick={logout}>Logout</Link>
                 </div>
