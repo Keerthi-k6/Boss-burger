@@ -29,18 +29,18 @@
     color: white;
     border-radius: 50%;
     transition: all 300ms ease-in;
-    position: relative; /* Added to position the count badge */
+    position: relative;
   }
   
   .cart span {
     position: absolute;
-    top: -3px; /* Adjust as needed */
-    right: -5px; /* Adjust as needed */
+    top: -3px; 
+    right: -5px;
     background-color: var(--light-yellow);
     color: var(--yellow);
     border-radius: 50%;
-    padding: 0.5rem;
-    font-size: 0.5rem;
+    padding: 0.1rem 0.4rem;
+    font-size: 1rem;
     font-weight: 600;
   }
   

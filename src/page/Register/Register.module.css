@@ -1,0 +1,15 @@
+.register-form
+{
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--black);
+}
+.register-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+

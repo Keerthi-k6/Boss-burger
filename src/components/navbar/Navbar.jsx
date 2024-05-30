@@ -4,21 +4,15 @@ import logo from '../../assets/nav-logo.png';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from '../../hooks/useCart';
+import { useAuth } from '../../hooks/useAuth';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
-  const user = {
-    name: 'John',
-  };
+  const {user,logout} = useAuth()
   const {cart} = useCart()
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const logout = () => {
-    console.log('logout');
-  };
-
   return (
     <section className={styles['nav-wrapper']} id='navbar'>
       <div className={`${styles['nav-container']} flexCenter innerWidth}`} style={{ justifyContent: 'space-between', padding: '1.5rem' }}>
@@ -36,7 +30,7 @@ const Navbar = () => {
             {user ? (
               <div className='user_container'>
                 <Link to='/profile'>{user.name}</Link>
-                <div className={`${styles.usermenu} ${isMenuOpen && styles.open}`}> {/* Conditionally apply 'open' class */}
+                <div className={`${styles.usermenu} ${isMenuOpen && styles.open}`}> 
                   <Link to='/profile'>Profile</Link>
                   <Link onClick={logout}>Logout</Link>
                 </div>

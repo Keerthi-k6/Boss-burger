@@ -1,0 +1,29 @@
+.container
+{
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    padding-top: 0.5rem;
+    border: 1px solid transparent;
+    background-color: var(--card-color);
+    width: 100%;
+
+}
+
+.label
+{
+    display: inline-block;
+    margin-left: 2rem;
+    margin-bottom: 0.2rem;
+    color: var(--black);
+    font-size: 1rem;
+}
+
+.content
+{
+    padding: 0 0.5rem;
+    height: 2.7rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
