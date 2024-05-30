@@ -32,11 +32,15 @@ const Navbar = () => {
             <FaShoppingCart fontSize={'1.5rem'} />
             {cart.totalCount > 0 && <span>{cart.totalCount}</span>}
           </Link>
-          <button className='button user' onMouseEnter={toggleMenu} onMouseLeave={toggleMenu} >
+          <div 
+            className={`user ${styles.userButtonContainer}`} 
+            onMouseEnter={() => setIsMenuOpen(true)} 
+            onMouseLeave={() => setIsMenuOpen(false)}
+          >
             {user ? (
               <div className='user_container'>
                 <Link to='/profile'>{user.name}</Link>
-                <div className={`${styles.usermenu} ${isMenuOpen && styles.open}`}>
+                <div className={`${styles.usermenu} ${isMenuOpen ? styles.open : ''}`}>
                   <Link to='/profile'>Profile</Link>
                   <Link onClick={logout}>Logout</Link>
                 </div>
@@ -44,7 +48,7 @@ const Navbar = () => {
             ) : (
               <Link to='/login'>Login</Link>
             )}
-          </button>
+          </div>
         </div>
       </div>
     </section>
