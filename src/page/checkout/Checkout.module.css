@@ -1,0 +1,26 @@
+.checkout-container
+{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+.form-content{
+    display: flex;
+    flex-direction: row;
+    width: 50rem;
+    margin:0 3rem 0 0 
+}
+.form-content , .form-inputs
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.form-inputs
+{
+    width: 100%;
+}
+
