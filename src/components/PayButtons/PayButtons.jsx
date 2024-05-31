@@ -19,6 +19,7 @@ const PayButtons = ({ order }) => {
             }
         } catch (err) {
             console.log(err);
+            toast.error('Payment Failed!');
         }
     };
 

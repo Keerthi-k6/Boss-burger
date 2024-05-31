@@ -9,6 +9,8 @@ import Register from './page/Register/Register.jsx'
 import AuthRoute from './components/AuthRoute/AuthRoute.jsx'
 import CheckoutPage from './page/checkout/CheckoutPage.jsx'
 import PaymentPage from './page/Payment/PaymentPage.jsx'
+import OrderTrackPage from './page/OrderPage/OrderTrackPage.jsx'
+import Profile from './page/Profile/Profile.jsx'
 
 const AppRoutes = () => {
   return (
@@ -31,6 +33,18 @@ const AppRoutes = () => {
     element={<AuthRoute>
             <PaymentPage/>
            </AuthRoute>}/>
+    <Route 
+    path='/track/:orderId' 
+    element={<AuthRoute>
+            <OrderTrackPage/>
+           </AuthRoute>}/>
+    <Route 
+    path='/profile' 
+    element={<AuthRoute>
+            <Profile/>
+           </AuthRoute>}/>
+
+    
    </Routes>
   )
 }

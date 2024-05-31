@@ -1,0 +1,16 @@
+.order
+{
+    background-color: var(--card-color);
+    border-radius: 2rem;
+    border:1px solid  var(--black);
+}
+.content
+{
+    border-radius: 2rem;
+}
+.map
+{
+    margin-top: 3rem;
+    border-radius: 2rem;
+    border: 1px solid var(--black);
+}
