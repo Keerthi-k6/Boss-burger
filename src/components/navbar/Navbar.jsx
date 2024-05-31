@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
         <div className={`flexCenter ${styles['nav-links']}`}>
           <Link to='/menu'>Menu</Link>
-          <Link to='/about'>Your Orders</Link>
+          <Link to='/orders'>Your Orders</Link>
           <Link to='/cart' className={styles.cart}>
             <FaShoppingCart fontSize={'1.5rem'} />
             {cart.totalCount > 0 && <span>{cart.totalCount}</span>}
@@ -39,7 +39,7 @@ const Navbar = () => {
           >
             {user ? (
               <div className='user_container'>
-                <Link to='/profile'>{user.name}</Link>
+                <Link to='/dashboard'>{user.name}</Link>
                 <div className={`${styles.usermenu} ${isMenuOpen ? styles.open : ''}`}>
                   <Link to='/profile'>Profile</Link>
                   <Link onClick={logout}>Logout</Link>

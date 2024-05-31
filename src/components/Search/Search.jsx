@@ -17,7 +17,7 @@ const Search = () => {
   return (
     <div className={styles.container}>
       <input type='text' placeholder = 'Search Boss Burger!' onKeyUp={e=>e.key ==='Enter' && search()} value={term} onChange={(e)=> setTerm(e.target.value)} />
-      <button className={styles.btn } onClick={search}>Search</button>
+      <button className={styles.btn } onClick={search} style={{marginTop:0}}>Search</button>
     </div>
   )
 } 

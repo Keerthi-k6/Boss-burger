@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './OrderItemsList.module.css'
-import Title from '../Title/Title'
 const OrderItemsList = ({order}) => {
   return (
     <>
-      <Title Title='Order Items :' color='var(--black)' fontSize='1rem' />
-        <div className={`${styles['menu-wrapper']} innerwidth `} >
-          <div className={`${styles['menu-container']} innerwidth `}>
+        <div className={`${styles['menu-wrapper']} innerwidth `} style={{marginTop: '3rem'}} >
+          <div className={`${styles['menu-container']} innerwidth paddings`}>
+           <strong>Order Items :</strong>
             {order.items.map(item => (
               <article className={`${styles['menu-item']} flexStart`} key={item.food.id} style={{justifyContent: 'space-around'}}>
                 <Link className={styles['menu-image']} to={`/food/${item.food.id}`}>

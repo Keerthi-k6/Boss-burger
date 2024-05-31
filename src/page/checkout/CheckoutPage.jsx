@@ -32,7 +32,7 @@ const CheckoutPage = () => {
 
     return (
         <div className={styles['checkout-page'] + ' innerwidth'} style={{padding: '4rem',paddingTop: '0'}} >
-            <Title Title='Order Summary' color='var(--black)' fontSize='2rem'/>
+            <Title Title='Check Out details ' color='var(--black)' fontSize='2rem'/>
             <form 
                 onSubmit={handleSubmit(submit)}
                 className={styles['checkout-container'] + ' innerwidth'}
@@ -62,7 +62,7 @@ const CheckoutPage = () => {
                 </div>
                 <div className={styles['order-items']}>
                 <OrderItemsList order={order} />
-                <button className={`button`} type='submit' style={{ width: '20rem' }}>Go To Payment</button>
+                <button className={`btn button`} type='submit' style={{ width: '20rem' }}>Go To Payment</button>
                 </div>
             </form>
         </div>

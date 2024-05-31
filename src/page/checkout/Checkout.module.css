@@ -31,9 +31,9 @@
     padding: 1rem; /* Add padding for better appearance */
 }
 
-button {
+.btn {
     margin-top: 2rem;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .order-items
@@ -41,6 +41,7 @@ button {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .form-map>p
 {
