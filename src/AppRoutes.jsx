@@ -11,6 +11,7 @@ import CheckoutPage from './page/checkout/CheckoutPage.jsx'
 import PaymentPage from './page/Payment/PaymentPage.jsx'
 import OrderTrackPage from './page/OrderPage/OrderTrackPage.jsx'
 import Profile from './page/Profile/Profile.jsx'
+import OrderPage from './page/Order/OrderPage.jsx'
 
 const AppRoutes = () => {
   return (
@@ -42,6 +43,11 @@ const AppRoutes = () => {
     path='/profile' 
     element={<AuthRoute>
             <Profile/>
+           </AuthRoute>}/>
+    <Route 
+    path='/orders/:filter?' 
+    element={<AuthRoute>
+            <OrderPage/>
            </AuthRoute>}/>
 
     
