@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import StarRating from '../starRating/StarRating';
 import Title from '../Title/Title';
 const MenuCards = ({foods}) => {
+  console.log(foods)
   return (
     <ul>
        <section className={styles['menu-wrapper']}>
@@ -13,7 +14,7 @@ const MenuCards = ({foods}) => {
           {foods.map(food => {
             return (
               <article className={styles['menu-item']} key={food.id}>
-                <Link className={styles['menu-image']} to = {`/food/${food.id}`}>
+                <Link className={styles['menu-image']} to = {`/food/${food._id}`}>
                   <img src={food.imageUrl} alt={food.name} width={200} />
                 </Link>
                 <div className={styles['menu-text']}>

@@ -1,0 +1,52 @@
+.menu-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.menu-container
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--yellow);
+    padding: 1rem;
+}
+.menu-item
+{
+    width:100%;
+    background-color:var(--card-color);
+    color: var(--black);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    gap: 3rem;
+    position: relative;
+}
+.menu-image img
+{
+   border-radius: 1rem;
+}
+.btn{
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    color: white;
+    background: var(--yellow-gradient);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover
+{
+    color:var(--black);
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+}

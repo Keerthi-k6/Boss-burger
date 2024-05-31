@@ -19,6 +19,7 @@ const FoodPage = () => {
     useEffect(()=>
     {
         getById(id).then(food=> setfood(food))
+        console.log(food.name)
     },[id])
   return (
     <>

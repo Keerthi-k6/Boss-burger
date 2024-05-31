@@ -1,26 +1,55 @@
-.checkout-container
-{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-}
-.form-content{
-    display: flex;
-    flex-direction: row;
-    width: 50rem;
-    margin:0 3rem 0 0 
-}
-.form-content , .form-inputs
-{
+.checkout-page {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-
+    align-items: center;
+    padding: 2rem;
 }
-.form-inputs
-{
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
+.form-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.address, .form-map {
+    width: 48%;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--yellow);
+    border-radius: 1rem;
+    padding: 1rem; /* Add padding for better appearance */
+}
+
+button {
+    margin-top: 2rem;
+    align-self: center;
+}
+
+.order-items
+{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-map>p
+{
+    font-size: 1rem;
+}
+.form-map
+{
+    border-radius: 1rem;
+    border: 1px solid var(--yellow);
+    padding: 1rem;
+    width: fit-content;
+}
