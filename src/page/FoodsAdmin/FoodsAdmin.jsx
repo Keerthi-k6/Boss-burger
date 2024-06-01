@@ -35,7 +35,7 @@ export default function FoodsAdmin() {
     <div className={styles.container + ' innerwidth paddings flexColCenter'}>
         <Title Title='Manage Food' color='var(--black)' fontSize='2rem' />
       <div className={styles.list}>
-        <Search searchRoute={'/admin/foods/'} defaultRoute={'/admin/foods'} />
+        <Search searchRoute={'/admin/foods/'} defaultRoute={'/admin/foods'}  placeholder={'Search Foods!'}/>
         <Link to='/admin/addFood' className={styles.add_food + ' button'}>Add food +</Link>
         <FoodsNotFound />
         {

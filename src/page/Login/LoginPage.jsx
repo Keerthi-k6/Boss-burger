@@ -5,6 +5,7 @@ import { useAuth } from '../../hooks/useAuth'
 import styles from  './LoginPage.module.css'
 import Title from '../../components/Title/Title'
 import Input from '../../components/input/Input'
+import { EMAIL } from '../../constants/patterns'
 const LoginPage = () => {
     const {
         handleSubmit,
@@ -27,11 +28,7 @@ const LoginPage = () => {
         <Title Title='Login Page' color={'var(--black)'} fontSize={'2rem'} />
       <div className={`${styles['login-container']}`} style={{width:'70%'}}>
         <form className={styles['login-form'] + ' flexColCenter'} onSubmit={handleSubmit(submit)} noValidate >
-           <Input type = 'email' label='Email'{...register('email', {required: true,pattern:
-            {
-                value:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,63}$/,
-                message:'Please enter a valid email'
-            }
+           <Input type = 'email' label='Email'{...register('email', {required: true,pattern:EMAIL,
            })} 
            error={errors.email}/>
            <Input type = 'password' label='Password'{...register('password', {required: true,

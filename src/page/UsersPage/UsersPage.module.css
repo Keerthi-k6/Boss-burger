@@ -1,0 +1,68 @@
+
+  .list {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    border:1px solid var(--black);
+}
+
+.list_items, .list_item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+  
+  .list_items {
+    color: var(--black);
+    font-weight: bold;
+    border-bottom: 2px solid var(--black);
+}
+
+.list_item {
+    background-color: var(--card-color);
+    
+}
+.divider
+{
+    border-radius: 2rem;
+}
+
+  .list_item p {
+    margin: 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions .btn {
+    padding: 5px 10px;
+    background-color: var(--yellow);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .actions .btn:disabled {
+    background-color: #cccccc;
+  }
+  
+  .actions .btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .actions .btn[style*="background-color: red"] {
+    background-color: red;
+  }
+  

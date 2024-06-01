@@ -16,6 +16,8 @@ import Dashboard from './page/Dashboard/Dashboard.jsx'
 import AdminRoutes from './components/AdminRoutes/AdminRoutes.jsx'
 import FoodsAdmin from './page/FoodsAdmin/FoodsAdmin.jsx'
 import FoodEditPage from './page/FoodEditPage/FoodEditPage.jsx'
+import UsersPage from './page/UsersPage/UsersPage.jsx'
+import UserEditPage from './page/UserEditPage/UserEditPage.jsx'
 const AppRoutes = () => {
   return (
    <Routes>
@@ -73,6 +75,17 @@ const AppRoutes = () => {
     path='/admin/editFood/:foodId?' 
     element={<AdminRoutes>
             <FoodEditPage/>
+           </AdminRoutes>}/>
+    <Route 
+    path='/admin/users/:searchTerm?' 
+    element={<AdminRoutes>
+            <UsersPage/>
+           </AdminRoutes>}/>
+
+    <Route 
+    path='/admin/editUser/:userId?' 
+    element={<AdminRoutes>
+            <UserEditPage/>
            </AdminRoutes>}/>
 
     

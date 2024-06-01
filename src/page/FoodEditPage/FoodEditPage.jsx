@@ -40,7 +40,7 @@ const FoodEditPage = () => {
         }
         const newFood = await add(food);
         toast.success(`Food "${ newFood.name}" added successfully`)
-        navigate(`/admin/editFood/${newFood.id}`,{replace:true})
+        navigate(`/admin/foods`,{replace:true})
 
         
     }

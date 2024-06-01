@@ -5,6 +5,7 @@ import Title from '../../components/Title/Title'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import styles from './Register.module.css'
 import { useAuth } from '../../hooks/useAuth'
+import { EMAIL } from '../../constants/patterns'
 const Register = () => {
     const auth = useAuth()
     const {user} = auth
@@ -28,11 +29,7 @@ const Register = () => {
          <form  className={styles['register-form'] + ' flexColCenter'} onSubmit={handleSubmit(handleRegSubmit) } noValidate>
             <Input type = 'text' label='Name'{...register('name', {required: true,minLength: 5})} 
             error={errors.name}/>
-            <Input type = 'email' label='Email'{...register('email', {required: true,pattern:
-            {
-                value:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,63}$/i,
-                message:'Please enter a valid email'
-            }
+            <Input type = 'email' label='Email'{...register('email', {required: true,pattern:EMAIL,
             })} 
             error={errors.email}/>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import styles from './Search.module.css'
 
-const Search = ({ searchRoute = '/search/', defaultRoute = '/menu', margin }) => {
+const Search = ({ searchRoute = '/search/', defaultRoute = '/menu', margin ,placeholder='Search Boss Burger!'}) => {
   const [term, setTerm] = useState('')
   const navigate = useNavigate()
   const { searchTerm } = useParams()
@@ -19,7 +19,7 @@ const Search = ({ searchRoute = '/search/', defaultRoute = '/menu', margin }) =>
     <div className={styles.container} style={{ margin }}>
       <input
         type="text"
-        placeholder="Search Boss Burger!"
+        placeholder={placeholder}
         onKeyUp={e => e.key === 'Enter' && search()}
         value={term}
         onChange={e => setTerm(e.target.value)}
