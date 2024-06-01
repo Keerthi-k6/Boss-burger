@@ -12,7 +12,9 @@ import PaymentPage from './page/Payment/PaymentPage.jsx'
 import OrderTrackPage from './page/OrderPage/OrderTrackPage.jsx'
 import Profile from './page/Profile/Profile.jsx'
 import OrderPage from './page/Order/OrderPage.jsx'
-
+import Dashboard from './page/Dashboard/Dashboard.jsx'
+import AdminRoutes from './components/AdminRoutes/AdminRoutes.jsx'
+import FoodsAdmin from './page/FoodsAdmin/FoodsAdmin.jsx'
 const AppRoutes = () => {
   return (
    <Routes>
@@ -49,6 +51,16 @@ const AppRoutes = () => {
     element={<AuthRoute>
             <OrderPage/>
            </AuthRoute>}/>
+    <Route 
+    path='/dashboard' 
+    element={<AuthRoute>
+            <Dashboard/>
+           </AuthRoute>}/>
+    <Route 
+    path='/admin/foods/:searchTerm?' 
+    element={<AdminRoutes>
+            <FoodsAdmin/>
+           </AdminRoutes>}/>
 
     
    </Routes>

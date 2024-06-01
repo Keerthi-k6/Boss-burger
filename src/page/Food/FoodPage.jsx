@@ -7,6 +7,7 @@ import Tags from '../../components/Tags/Tags'
 import Title from '../../components/Title/Title'
 import { useCart } from '../../hooks/useCart'
 import NotFound from '../../components/NotFound/NotFound'
+import { toast } from 'react-toastify'
 const FoodPage = () => {
     const [food,setfood] = useState({})
     const {id} = useParams()
@@ -14,7 +15,8 @@ const FoodPage = () => {
     const navigate = useNavigate()
     const handleAddToCart = ()=>{
         addToCart(food)
-        navigate('/cart')
+        toast.success('Item added to cart!')
+        // navigate('/cart')
     }
     useEffect(()=>
     {

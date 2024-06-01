@@ -1,0 +1,33 @@
+.container
+{
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 70rem;
+    width: 100%;
+
+}
+.menu a{
+    width :30rem;
+    height: 11rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size:8rem;
+    transition: all 400ms ease;
+}
+.menu a p{
+    font-size: 3rem;
+}
+.menu a:hover{
+    box-shadow: var(--shadow);
+    -webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+    box-shadow: var(--shadow);
+}
