@@ -55,5 +55,3 @@ Using Nodemailer, the application sends order confirmation emails to users after
 - **Backend**: Node.js, Express, MongoDB, Mongoose, JWT, Nodemailer
 - **Payment Gateway**: Razorpay
 - **Styling**: CSS Modules
-
-Boss Burger is an attemptto create a website that has sleek UI and deliver a top-notch food ordering experience for users while providing comprehensive tools for administrators to manage the application's content and operations efficiently.
