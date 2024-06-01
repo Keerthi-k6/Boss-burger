@@ -15,6 +15,7 @@ import OrderPage from './page/Order/OrderPage.jsx'
 import Dashboard from './page/Dashboard/Dashboard.jsx'
 import AdminRoutes from './components/AdminRoutes/AdminRoutes.jsx'
 import FoodsAdmin from './page/FoodsAdmin/FoodsAdmin.jsx'
+import FoodEditPage from './page/FoodEditPage/FoodEditPage.jsx'
 const AppRoutes = () => {
   return (
    <Routes>
@@ -60,6 +61,18 @@ const AppRoutes = () => {
     path='/admin/foods/:searchTerm?' 
     element={<AdminRoutes>
             <FoodsAdmin/>
+           </AdminRoutes>}/>
+
+    <Route 
+    path='/admin/addFood' 
+    element={<AdminRoutes>
+            <FoodEditPage/>
+           </AdminRoutes>}/>
+
+    <Route 
+    path='/admin/editFood/:foodId?' 
+    element={<AdminRoutes>
+            <FoodEditPage/>
            </AdminRoutes>}/>
 
     

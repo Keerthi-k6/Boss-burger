@@ -1,24 +1,27 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const setLoadingInterceptor = ({showLoading, hideLoading}) => {
-    axios.interceptors.request.use(req => {
-        showLoading();
-        return req;
+export const setLoadingInterceptor = ({ showLoading, hideLoading }) => {
+  axios.interceptors.request.use(
+    req => {
+      if (!(req.data instanceof FormData)) showLoading();
+      return req;
     },
-    err => {
-        hideLoading();
-        return Promise.reject(err);
+    error => {
+      hideLoading();
+      return Promise.reject(error);
     }
-)
+  );
 
-axios.interceptors.response.use(res => {
-    hideLoading();
-    return res; 
-},
-err => {
-    hideLoading();
-    return Promise.reject(err);
-}
-)  
-}
-export default setLoadingInterceptor
+  axios.interceptors.response.use(
+    res => {
+      hideLoading();
+      return res;
+    },
+    error => {
+      hideLoading();
+      return Promise.reject(error);
+    }
+  );
+};
+
+export default setLoadingInterceptor;
