@@ -78,3 +78,9 @@ export const getAllByStatus = async () => {
     const  {data} = await axios.get('/api/orders/allstatus')
     return data
 }
+
+export const deliverStat = async orderId => {
+    const { data } = await axios.put(`api/upload/updateStatus/${orderId}` );
+    console.log(data);
+    return data;
+  };

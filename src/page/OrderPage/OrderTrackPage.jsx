@@ -2,22 +2,36 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import NotFound from '../../components/NotFound/NotFound';
 import styles from './OrderTrackPage.module.css'
-import { trackOrderById } from '../../services/orderService';
+import { deliverStat, trackOrderById } from '../../services/orderService';
 import Date from '../../components/Date/DateTime';
 import OrderItemsList from '../../components/OrderItemsList/OrderItemsList';
 import Map from '../../components/Map/Map';
-import Title from '../../components/Title/Title';
+import { useAuth } from '../../hooks/useAuth';
+import { toast } from 'react-toastify';
 const OrderTrackPage = () => {
   const {orderId} = useParams()
   const [order,setOrder] = useState();
+  const { user } = useAuth();
   useEffect(() => {
     orderId && trackOrderById(orderId).then(order => setOrder(order))
+    // handleDeliver(orderId)
 
   },[])
   if(!orderId)
     {
       return <NotFound message={"Order not found"} linkText={"Go Back to HomePage"} linkRoute={'/'}/>
     }
+    const handleDeliver = async (orderId) => {
+      try {
+        const deliver = await deliverStat(orderId);
+        setOrder(deliver.order);
+        toast.success(deliver.message);
+      } catch (error) {
+        console.error("Error delivering order:", error);
+        toast.error("Failed to deliver order");
+      }
+    };
+    
   return (
     order && 
     <>
@@ -49,9 +63,22 @@ const OrderTrackPage = () => {
           </div>
       </div>
           <OrderItemsList order={order} />
-          {order.status === 'NEw' && (<div className={styles.payment}>
+          {order.status === 'NEW' && (<div className={styles.payment}>
             <Link to = '/payment' className={'button'}>Proceed To Payment</Link> 
             </div>)}
+            {
+                order.status === 'PAYED' && user.isAdmin ? (
+                  <button className={`${styles.btn} ${styles.pending}`} type='submit' onClick={() => handleDeliver(order.id)}>
+                    {order.status === 'PAYED' ? 'Deliver Order' : ''}
+                  </button>
+                ) : order.status === 'DELIVERED' && user.isAdmin && (
+                  <button className={`${styles.btn}  ${styles.delivered}`}>
+                    {order.status === 'DELIVERED' ? 'Order Delivered !' : ''}
+                  </button>
+                  
+                )
+             }
+
     </div>
     </>
   )
