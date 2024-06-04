@@ -43,7 +43,7 @@ const Register = () => {
 
             <Input type = 'text' label='Address'{...register('address', {required: true,  minLength: 10,
             })} 
-            error={errors.password}/>
+            error={errors.address}/>
             <button type='submit' className='button' style={{width:'9rem'}}>Register</button>
             <p style={{marginTop:'1rem'}}>Already have an account? &nbsp;
             <Link to = {`/login?${returnUrl ? `returnUrl=${returnUrl}` : ''}`} style={{color:'var(--yellow)'}}> Login</Link>
