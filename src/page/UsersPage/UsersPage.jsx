@@ -53,12 +53,12 @@ const UsersPage = () => {
                             <p>{user.isAdmin ? '✅' : '❌'}</p>
                             <p className={styles.actions}>
                                 <button className={styles.btn}><Link to={`/admin/editUser/${user.id}`}>Edit</Link></button>
-                                {
+                                {/* {
                                     auth.user.id !== user.id &&(
                                     <button className={styles.btn} style={{ backgroundColor: user.isBlocked ? 'red' : '' }}>
                                     <Link onClick={() => handleToggleBlock(user.id)}>{user.isBlocked ? 'Unblock' : 'Block'}</Link>
                                     </button>
-                                )}
+                                )} */}
                             </p>
                         </div>
                     ))
